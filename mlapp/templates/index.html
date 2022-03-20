@@ -17,6 +17,7 @@
 
     <!-- Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
 
      <!--  Custom CSS -->
     <link rel="stylesheet" href="{% static 'home_css/main.css' %}" />
@@ -40,10 +41,10 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Breast Cancer</a>
+        <a class="nav-link" href="#carousel_body">Breast Cancer</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Examine</a>
+        <a class="nav-link" href="#detect">Examine</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">About Us</a>
@@ -74,16 +75,66 @@
     <div class="banner-sub-heading">
     Enter the details and detect using Machine Learning!
     </div>
-    <button type="button" class="btn btn-warning text-dark btn-banner">Examine Yourself</button>
+    <a type="button" class="btn btn-warning text-dark btn-banner" href="#detect">Examine Yourself</a>
     </div>
     </div>
+    </div>
+
+    <!-- About Breast Cancer -->
+    <div class="container" id="carousel_body">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-caption">
+                        <p>Breast cancer is one of the most common cancers among women worldwide, representing the
+                            majority of new cancer cases and cancer-related deaths according to global statistics,
+                            making it a significant public health problem in today’s society </p>
+                        <img src="https://i.imgur.com/lE89Aey.jpg">
+                        <div id="image-caption">Breast Cancer</div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption">
+                        <p>Breast cancer occurs when some breast cells begin to grow abnormally. These cells divide
+                            more rapidly than healthy cells and continue to gather, forming a lump or mass. The cells
+                            may spread (metastasize) to the lymph nodes or other parts of the body. Breast cancer
+                            mostly begins with cells in the milk-producing ducts (invasive ductal carcinoma) or in the
+                            glandular tissue called lobules (invasive lobular carcinoma) or in other cells or tissue
+                            within the breast.</p>
+                        <img src="https://i.imgur.com/QptVdsp.jpg" class="img-fluid">
+                        <div id="image-caption">Cromption Greves</div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption">
+                        <p>Early detection of breast cancer is important as it provides several treatment options,
+                            increased survival, and good quality of life. Early detection provides the best chance of
+                            effective treatment. When Breast cancer is found early, when it’s small in size and has not
+                            spread, it is easier to treat successfully.</p>
+                        <img src="https://i.imgur.com/jQWThIn.jpg" class="img-fluid">
+                        <div id="image-caption">Harry Mon</div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption">
+                        <p>It is important to check yourself regularly, so that you can spot any change immediately.
+                            Remember to check all parts of your breasts, armpits and up to your collarbone.
+                            Check once a month, one week after your period, after age 20.</p>
+                        <img src="https://img.freepik.com/free-vector/light-realistic-pink-ribbon-icon-breast-cancer-awareness-symbol-illustration_177761-158.jpg?w=740" class="img-fluid">
+                        <div id="image-caption">Breast Cancer Awareness</div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#demo" data-slide="prev" id="carousel_icon"> <i class='fas fa-arrow-left'></i> </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next" id="carousel_icon"> <i class='fas fa-arrow-right'></i> </a>
+        </div>
     </div>
 
     <!-- Inputs Form -->
     <!-- Breast cancer is the most common cancer among women in 154 countries and the main cause of cancer-related death in
     103 countries. The early diagnosis of Breast Cancer can improve the prognosis and chance of survival significantly,
     as it can promote timely clinical treatment to patients. -->
-    <div class="registration-form">
+    <div class="registration-form" id="detect">
         <form>
             <div class="form-icon">
                 <span><i class="icon icon-user"></i></span>
