@@ -5,50 +5,84 @@
     <meta charset="UTF-8">
     <title>Breast Cancer Page</title>
 
-    <!-- JS linked -->
-{#    <script src="javascript.js"></script>#}
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
     <!-- Bootstrap 4.5 by links -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <!-- Icons-->
+    <!-- Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
 
      <!--  Custom CSS -->
     <link rel="stylesheet" href="{% static 'home_css/main.css' %}" />
 
-    <!-- JSS-->
+    <!-- JS linked -->
     <script src="{% static 'home_js/home.js' %}"></script>
 
 </head>
+
 <body>
-    <section class="section home-5-bg" id="home">
-        <div id="particles-js"></div>
-        <div class="bg-overlay"></div>
-        <div class="home-center">
-            <div class="home-desc-center">
-                <div class="container">
-                    <div class="justify-content-center row">
-                        <div class="col-lg-7">
-                            <div class="mt-40 text-center home-5-content">
-                                <div class="home-icon mb-4"><i class="mdi mdi-pinwheel mdi-spin text-white h1"></i></div>
-                                <h1 class="text-white font-weight-normal home-5-title mb-0">A Clean &amp; Minimal Landing Template</h1>
-                                <p class="text-white-70 mt-4 f-15 mb-0">Ut enim ad minima veniam quis nostrum exercitationem ullam corporis at suscipit laboriosam nisi ut aliquid a commodi consequatur Quis autem.</p>
-                                <div class="mt-5">
-                                    <input class="btn btn-default" type="button" value="Get started">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
+    <div class="container">
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Breast Cancer</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Examine</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About Us</a>
+      </li>
+       <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Project by
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item">Manvi Vrati [190136]</a>
+          <a class="dropdown-item">Pranjal Tulsiyan [190119]</a>
+          <a class="dropdown-item">Saloni Chawla [190078]</a>
         </div>
-    </section>
+      </li>
+    </ul>
+    </div>
+    </div>
+    </nav>
+
+    <div class="banner">
+    <div class="container">
+    <div class="banner-text">
+    <div class="banner-heading">
+    Breast Cancer Detection
+    </div>
+
+    <div class="banner-sub-heading">
+    Enter the details and detect using Machine Learning!
+    </div>
+    <button type="button" class="btn btn-warning text-dark btn-banner">Examine Yourself</button>
+    </div>
+    </div>
+    </div>
+
+    <!-- Inputs Form -->
+    <!-- Breast cancer is the most common cancer among women in 154 countries and the main cause of cancer-related death in
+    103 countries. The early diagnosis of Breast Cancer can improve the prognosis and chance of survival significantly,
+    as it can promote timely clinical treatment to patients. -->
     <div class="registration-form">
         <form>
             <div class="form-icon">
@@ -69,10 +103,12 @@
             <div class="form-group">
                 <button type="button" class="btn btn-block create-account">Check Cancer</button>
             </div>
+            <div class="form-group">
+                <input type="number" class="form-control item" id="password" placeholder="Entry 5">
+            </div>
         </form>
     </div>
-{#    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>#}
-{#    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>#}
+
 </body>
 </html>
 
