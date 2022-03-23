@@ -16,6 +16,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Icons -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
 
@@ -88,9 +90,7 @@
                     <div class="carousel-caption">
                         <p>Breast cancer is one of the most common cancers among women worldwide, representing the
                             majority of new cancer cases and cancer-related deaths according to global statistics,
-                            making it a significant public health problem in today’s society </p>
-                        <img src="https://i.imgur.com/lE89Aey.jpg">
-                        <div id="image-caption">Breast Cancer</div>
+                            making it a significant public health problem in today’s society. </p>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -101,8 +101,6 @@
                             mostly begins with cells in the milk-producing ducts (invasive ductal carcinoma) or in the
                             glandular tissue called lobules (invasive lobular carcinoma) or in other cells or tissue
                             within the breast.</p>
-                        <img src="https://i.imgur.com/QptVdsp.jpg" class="img-fluid">
-                        <div id="image-caption">Cromption Greves</div>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -111,8 +109,6 @@
                             increased survival, and good quality of life. Early detection provides the best chance of
                             effective treatment. When Breast cancer is found early, when it’s small in size and has not
                             spread, it is easier to treat successfully.</p>
-                        <img src="https://i.imgur.com/jQWThIn.jpg" class="img-fluid">
-                        <div id="image-caption">Harry Mon</div>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -120,8 +116,8 @@
                         <p>It is important to check yourself regularly, so that you can spot any change immediately.
                             Remember to check all parts of your breasts, armpits and up to your collarbone.
                             Check once a month, one week after your period, after age 20.</p>
-                        <img src="https://img.freepik.com/free-vector/light-realistic-pink-ribbon-icon-breast-cancer-awareness-symbol-illustration_177761-158.jpg?w=740" class="img-fluid">
-                        <div id="image-caption">Breast Cancer Awareness</div>
+                        <!--<img src="https://img.freepik.com/free-vector/light-realistic-pink-ribbon-icon-breast-cancer-awareness-symbol-illustration_177761-158.jpg?w=740" class="img-fluid">
+                        <div id="image-caption">Breast Cancer Awareness</div>-->
                     </div>
                 </div>
             </div>
@@ -136,29 +132,101 @@
     as it can promote timely clinical treatment to patients. -->
     <div class="registration-form" id="detect">
         <form>
-            <div class="form-icon">
+            <!--<div class="form-icon">
                 <span><i class="icon icon-user"></i></span>
+            </div>-->
+            <div class="form-icon">
+                <img class="circular--square" src="https://img.freepik.com/free-vector/light-realistic-pink-ribbon-icon-breast-cancer-awareness-symbol-illustration_177761-158.jpg?w=740" class="img-fluid">
             </div>
             <div class="form-group">
-                <input type="number" class="form-control item" id="username" placeholder="Entry 1">
+                <label class="form-control label">Mean Radius</label>
+                <input type="number" class="form-control item" id="username" placeholder="Enter Mean Radius">
             </div>
             <div class="form-group">
-                <input type="number" class="form-control item" id="password" placeholder="Entry 2">
+                <label class="form-control label">Mean Texture</label>
+                <input type="number" class="form-control item" id="password" placeholder="Enter Mean Texture">
             </div>
             <div class="form-group">
-                <input type="number" class="form-control item" id="email" placeholder="Entry 3">
+                <label class="form-control label">Mean Perimeter</label>
+                <input type="number" class="form-control item" id="email" placeholder="Enter Mean Perimeter">
             </div>
             <div class="form-group">
-                <input type="number" class="form-control item" id="phone-number" placeholder="Entry 4">
+                <label class="form-control label">Mean Area</label>
+                <input type="number" class="form-control item" id="phone-number" placeholder="Enter Mean Area">
             </div>
             <div class="form-group">
-                <button type="button" class="btn btn-block create-account">Check Cancer</button>
+                <label class="form-control label">Mean Smoothness</label>
+                <input type="number" class="form-control item" id="password" placeholder="Enter Mean Smoothness">
             </div>
             <div class="form-group">
-                <input type="number" class="form-control item" id="password" placeholder="Entry 5">
+                <button type="button" class="btn btn-block create-account" data-toggle="modal"
+                        data-target="#exampleModal">Check Cancer</button>
             </div>
         </form>
     </div>
+
+    <!-- Footer -->
+     <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
+     <footer>
+         <div class="row my-5 justify-content-center py-5">
+             <div class="col-11">
+                 <div class="row ">
+                     <div class="col-xl-8 col-md-6 col-sm-6 col-12 my-auto mx-auto a">
+                         <h3 class="text-muted mb-md-0 mb-5 bold-text">Breast Cancer Detection</h3>
+                     </div>
+                     <div class="col-xl-4 col-md-6 col-sm-6 col-12">
+                         <p><h6 class="mt-55 mt-2 text-muted bold-text"><b>MANVI VRATI</b></h6><small>
+                         <span><i class="fa fa-envelope" aria-hidden="true"></i></span> manvivrati19.set@modyuniversity.ac.in</small></p>
+                         <p><h6 class="text-muted bold-text"><b>PRANJAL TULSIYAN</b></h6><small>
+                         <span><i class="fa fa-envelope" aria-hidden="true"></i></span> pranjaltulsiyan19.set@modyuniversity.ac.in</small></p>
+                         <p><h6 class="text-muted bold-text"><b>SALONI CHAWLA</b></h6><small>
+                         <span><i class="fa fa-envelope" aria-hidden="true"></i></span> salonisaloni19.set@modyuniversity.ac.in</small></p>
+                     </div>
+                 </div>
+                 <div class="row ">
+                     <div class="col-xl-8 col-md-4 col-sm-4 col-auto my-md-0 mt-5 order-sm-1 order-3 align-self-end">
+                         <p class="social text-muted mb-0 pb-0 bold-text"> <span class="mx-2">
+                             <i class="fa fa-facebook" aria-hidden="true"></i></span> <span class="mx-2">
+                             <i class="fa fa-linkedin-square" aria-hidden="true"></i></span> <span class="mx-2">
+                             <i class="fa fa-twitter" aria-hidden="true"></i></span> <span class="mx-2">
+                             <i class="fa fa-instagram" aria-hidden="true"></i></span>
+                         </p>
+                         <small class="rights"><span>&#174;</span>BCD All Rights Reserved.</small>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </footer>
+    </div>
+
+
+    <!-- Result Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Results</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+        You are diagnosed to have cancer!
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save Record</button>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+    <!-- Scripts for JS for fast loading of page -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 </html>

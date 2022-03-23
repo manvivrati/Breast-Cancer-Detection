@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1|Kaushan+Script|Libre+Baskerville|Lobster');
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+
 /* Form [Entries] CSS */
 body{
     background-color: #dee9ff;
@@ -44,7 +48,7 @@ body{
     background-color: #5791ff;
     border: none;
     color: white;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .registration-form .social-media{
@@ -84,6 +88,24 @@ body{
     opacity: 0.6;
 }
 
+.registration-form .label{
+    border: white;
+    margin-bottom: 5px;
+    padding: 10px 10px;
+    font-weight: bold;
+    color: #e2458d;
+}
+
+/* Image of form */
+.circular--square {
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+    height: 140px;
+    width: 140px;
+}
+
 @media (max-width: 576px) {
     .registration-form form{
         padding: 50px 20px;
@@ -102,8 +124,8 @@ html {
       scroll-behavior: smooth;
 }
 
+
 /* Header CSS */
-@import url('https://fonts.googleapis.com/css?family=Gothic+A1|Kaushan+Script|Libre+Baskerville|Lobster');
 .body{
 	font-family: 'Gothic A1', sans-serif;
 	font-size:16px;
@@ -199,8 +221,6 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 	padding-top:30px;
 }
 
-
-/* mobile view */
 @media (max-width:500px)
 {
 	.navbar-nav{
@@ -244,9 +264,10 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 }
 }
 
+
 /*Carousel*/
 #carousel_body {
-    min-height: 90vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     background-color: #dee9ff;
@@ -254,18 +275,19 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 }
 
 #demo {
-    background: linear-gradient(112deg, #ffffff 50%, antiquewhite 50%);
+    background: linear-gradient(112deg, #d9b8ff 50%, #bc7dff 50%);
     max-width: max-content;
     margin: auto;
 }
 
 .carousel-caption {
     position: initial;
+    height: 280px; !important;
     z-index: 10;
-    padding: 5rem 8rem;
-    color: rgba(78, 77, 77, 0.856);
-    text-align: center;
-    font-size: 1.2rem;
+    padding: 6rem 10rem;
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    font-size: 2rem;
     font-style: italic;
     font-weight: bold;
     line-height: 2rem
@@ -274,11 +296,12 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 @media(max-width:767px) {
     .carousel-caption {
         position: initial;
+        height: 240px; !important;
         z-index: 10;
-        padding: 3rem 2rem;
-        color: rgba(78, 77, 77, 0.856);
+        padding: 3rem 4rem;
+        color: rgb(0, 0, 0);
         text-align: center;
-        font-size: 0.7rem;
+        font-size: 1rem;
         font-style: italic;
         font-weight: bold;
         line-height: 1.5rem
@@ -314,7 +337,7 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 }
 
 i.fas {
-    background-color: rgb(253, 222, 173);
+    background-color: rgb(185, 125, 248);
     padding: 1.4rem
 }
 
@@ -337,3 +360,37 @@ i.fas {
     transition: none;
     opacity: unset
 }
+
+/* Footer */
+.container-fluid {
+ overflow: hidden;
+ margin-top: 250px;
+ background: #262626;
+ color: #627482 !important;
+ margin-bottom: 0;
+ padding-bottom: 0
+}
+
+small {
+ font-size: calc(12px + (15 - 12) * ((100vw - 360px) / (1600 - 360))) !important
+}
+
+.bold-text {
+ color: #989c9e !important
+}
+
+.mt-55 {
+ margin-top: calc(50px + (60 - 50) * ((100vw - 360px) / (1600 - 360))) !important
+}
+
+h3 {
+ font-size: calc(34px + (40 - 34) * ((100vw - 360px) / (1600 - 360))) !important
+}
+
+.social {
+ font-size: 21px !important
+}
+
+.rights {
+ font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important
+ }
