@@ -3,7 +3,7 @@ from django.urls import path
 from mlapp import views
 
 urlpatterns = [
-    path('', views.printval, name='home'),
-    path('index/', views.index, name='index')
+    path('', views.index, name='index'),
+    path('prinval/', views.printval, name='printval')
 ]
 
