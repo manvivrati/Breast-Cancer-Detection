@@ -298,7 +298,7 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 @media(max-width:767px) {
     .carousel-caption {
         position: initial;
-        height: 240px; !important;
+        height: 500px; !important;
         z-index: 10;
         padding: 3rem 4rem;
         color: rgb(0, 0, 0);
