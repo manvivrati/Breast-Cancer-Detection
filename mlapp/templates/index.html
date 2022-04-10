@@ -131,7 +131,8 @@
     103 countries. The early diagnosis of Breast Cancer can improve the prognosis and chance of survival significantly,
     as it can promote timely clinical treatment to patients. -->
     <div class="registration-form" id="detect">
-        <form>
+        <form method="post" action="{% url 'index' %}">
+            {% csrf_token %}
             <!--<div class="form-icon">
                 <span><i class="icon icon-user"></i></span>
             </div>-->
@@ -140,26 +141,38 @@
             </div>
             <div class="form-group">
                 <label class="form-control label">Mean Radius</label>
-                <input type="number" class="form-control item" id="username" placeholder="Enter Mean Radius">
+                <input type="number" class="form-control item" name="meanradius" step="any"
+                       id="radius" placeholder="Enter Mean Radius"
+                       required>
             </div>
             <div class="form-group">
                 <label class="form-control label">Mean Texture</label>
-                <input type="number" class="form-control item" id="password" placeholder="Enter Mean Texture">
+                <input type="number" class="form-control item" name="meantexture" step="any"
+                       id="meantexture" placeholder="Enter Mean Texture"
+                       required>
             </div>
             <div class="form-group">
                 <label class="form-control label">Mean Perimeter</label>
-                <input type="number" class="form-control item" id="email" placeholder="Enter Mean Perimeter">
+                <input type="number" class="form-control item" name="meanperimeter" step="any"
+                       id="perimeter" placeholder="Enter Mean Perimeter"
+                       required>
             </div>
             <div class="form-group">
                 <label class="form-control label">Mean Area</label>
-                <input type="number" class="form-control item" id="phone-number" placeholder="Enter Mean Area">
+                <input type="number" class="form-control item" name="meanarea" step="any"
+                       id="area" placeholder="Enter Mean Area"
+                       required
+                />
             </div>
             <div class="form-group">
                 <label class="form-control label">Mean Smoothness</label>
-                <input type="number" class="form-control item" id="password" placeholder="Enter Mean Smoothness">
+                <input type="number" class="form-control item" name="meansmoothness" step="any"
+                       id="smoothness" placeholder="Enter Mean Smoothness"
+                       required>
             </div>
             <div class="form-group">
-                <button type="button" class="btn btn-block create-account" data-toggle="modal"
+                <button type="submit" class="btn btn-block create-account no-modal" data-toggle="modal"
+                        name="action" value="find_cancer"
                         data-target="#exampleModal">Check Cancer</button>
             </div>
         </form>

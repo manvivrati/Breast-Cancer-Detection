@@ -4,6 +4,5 @@ from mlapp import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('prinval/', views.printval, name='printval')
 ]
 

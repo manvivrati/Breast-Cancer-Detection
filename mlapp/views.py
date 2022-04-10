@@ -1,13 +1,35 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+import pickle
 
 
 # Create your views here.
-def printval(request):
-    txt = "<h1 style='color:blue; text-align:center'>" \
-          "Welcome to the Project for Breast Cancer Detection Using ML!\n Please go the index page! </h1>"
-    return HttpResponse(txt)
-
-
 def index(request):
-    return render(request, "index.html", {})
+
+    loaded_model = pickle.load(open('final_ml_model.sav', 'rb'))
+    context = {}
+    if request.method == "GET":
+        try:
+            pass
+        except:
+            details = []
+            mean_radius = float(request.GET['meanradius'])
+            mean_texture = float(request.GET['meantexture'])
+            mean_perimeter = float(request.GET['meanperimeter'])
+            mean_area = float(request.GET['meanarea'])
+            mean_smoothness = float(request.GET['meansmoothness'])
+            details.append(mean_radius)
+            details.append(mean_texture)
+            details.append(mean_perimeter)
+            details.append(mean_area)
+            details.append(mean_smoothness)
+            print(details)
+            # context['ans'] = lr.predict([details])
+            context['ans'] = loaded_model.predict([details])
+            print(context['ans'])
+            #context['success'] = "You are predicted to have Breast Cancer"
+        # Printing error message
+        # else:
+            # context['error'] = "You do not have Breast Cancer"
+
+    return render(request, "index.html", context)
