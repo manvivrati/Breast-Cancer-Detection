@@ -130,7 +130,7 @@
     <form method="post" action="{% url 'index' %}">
     {% csrf_token %}
     <div class="container mt-4 hm-gradient">
-        <div class="card mb-4">
+        <div class="card mb-4" style="background-color: #dee9ff; border: none">
             <div class="card-body">
                 <!-- Grid row -->
                 <div class="row">
@@ -285,7 +285,7 @@
                     <thead>
                         <tr>
                             <th>Symmetry Error</th>
-                            <th>Fractal Dimention Error</th>
+                            <th>Fractal Dimension Error</th>
                             <th>Worst Radius</th>
                             <th>Worst Texture</th>
                             <th>Worst Perimeter</th>
@@ -376,7 +376,7 @@
                 <!--Table-->
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-block col-md-8 offset-md-2" data-toggle="modal" style="border-radius: 30px"
+                <button type="submit" class="btn btn-primary btn-block col-md-8 offset-md-2" data-toggle="modal" style="border-radius: 30px; font-weight: bold;"
                         name="action" value="find_cancer" data-target="#exampleModal">Check Cancer</button>
             </div>
         </div>

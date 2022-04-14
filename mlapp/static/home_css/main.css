@@ -104,14 +104,11 @@ th{
     padding: 1rem 1rem;
     display: inline-block;
     border: 3px solid #333333;
-    /*font-size: 2.5rem;*/
     border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-    /*letter-spacing: 0.3ch;*/
     background: #ffffff;
     position: relative;}
 
     .sketchy::before {
-        content: '';
         border: 2px solid #353535;
         display: block;
         width: 100%;

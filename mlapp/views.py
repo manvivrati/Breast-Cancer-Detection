@@ -5,15 +5,14 @@ import pickle
 
 # Create your views here.
 def index(request):
-
     loaded_model = pickle.load(open('final_ml_model.sav', 'rb'))
     context = {}
-    if request.method == "GET":
+    if request.method == "POST":
         try:
             pass
         except:
             details = []
-            mean_radius = float(request.GET['meanradius'])
+            mean_radius = float(request.POST['meanradius'])
             mean_texture = float(request.GET['meantexture'])
             mean_perimeter = float(request.GET['meanperimeter'])
             mean_area = float(request.GET['meanarea'])
@@ -23,6 +22,7 @@ def index(request):
             details.append(mean_perimeter)
             details.append(mean_area)
             details.append(mean_smoothness)
+            print("Pranjal")
             print(details)
             # context['ans'] = lr.predict([details])
             context['ans'] = loaded_model.predict([details])
