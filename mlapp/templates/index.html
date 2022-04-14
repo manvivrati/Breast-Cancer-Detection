@@ -126,57 +126,262 @@
         </div>
     </div>
 
-    <!-- Inputs Form -->
-    <!-- Breast cancer is the most common cancer among women in 154 countries and the main cause of cancer-related death in
-    103 countries. The early diagnosis of Breast Cancer can improve the prognosis and chance of survival significantly,
-    as it can promote timely clinical treatment to patients. -->
-    <div class="registration-form" id="detect">
-        <form method="post" action="{% url 'index' %}">
-            {% csrf_token %}
-            <!--<div class="form-icon">
-                <span><i class="icon icon-user"></i></span>
-            </div>-->
-            <div class="form-icon">
-                <img class="circular--square" src="https://img.freepik.com/free-vector/light-realistic-pink-ribbon-icon-breast-cancer-awareness-symbol-illustration_177761-158.jpg?w=740" title="Breast Cancer Awareness Symbol">
+    <!-- Table -->
+    <form method="post" action="{% url 'index' %}">
+    {% csrf_token %}
+    <div class="container mt-4 hm-gradient">
+        <div class="card mb-4">
+            <div class="card-body">
+                <!-- Grid row -->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-12">
+                        <h2 class="pt-3 pb-4 text-center font-bold font-up deep-purple-text">Examine Yourself: Fill yours details</h2>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+                <!--Table-->
+                <table class="table table-striped table-hover sketchy text-center">
+                    <!--Table head-->
+                    <thead>
+                        <tr>
+                            <th>Mean Radius</th>
+                            <th>Mean Texture</th>
+                            <th>Mean Perimeter</th>
+                            <th>Mean Area</th>
+                            <th>Mean Smoothness</th>
+                            <th>Mean Compactness</th>
+                        </tr>
+                    </thead>
+                    <!--Table body-->
+                    <tbody>
+                        <tr class="form-group">
+                            <td>
+                                <input type="number" class="form-control item" name="meanradius" step="any"
+                                        id="meanradius" value="-0.959199" onclick="empty()"
+                                        required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control item" name="meantexture" step="any"
+                                        id="meantexture" value="-1.005211" onclick="empty()"
+                                        required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control item" name="meanperimeter" step="any"
+                                        id="meanperimeter" value="-0.96580" onclick="empty()"
+                                        required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control item" name="meanarea" step="any"
+                                        id="meanarea" value="-0.852062" onclick="empty()"
+                                        required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control item" name="meansmootheness" step="any"
+                                        id="meansmootheness" value="-1.311599" onclick="empty()"
+                                        required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control item" name="meancompactness" step="any"
+                                        id="meancompactness" value="-1.003499" onclick="empty()"
+                                        required>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <!--Table head-->
+                    <thead>
+                        <tr>
+                            <th>Mean Concavity</th>
+                            <th>Mean Concave Points</th>
+                            <th>Mean Symmetry</th>
+                            <th>Mean Fractal Dimension</th>
+                            <th>Radius Error</th>
+                            <th>Texture Error</th>
+                        </tr>
+                    </thead>
+                    <!--Table body-->
+                    <tbody>
+                        <tr class="form-group">
+                            <td>
+                                <input type="number" class="form-control item" name="meanconcavity" step="any"
+                                        id="meanconcavity" value="-0.832260" onclick="empty()"
+                                        required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control item" name="meanconcavepoints" step="any"
+                                        id="meanconcavepoints" value="-1.058692" onclick="empty()"
+                                        required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control item" name="meansymmetry" step="any"
+                                        id="meansymmetry" value="-1.506447" onclick="empty()"
+                                        required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control item" name="meanfractaldim" step="any"
+                                        id="meanfractaldim" value="-0.838883" onclick="empty()"
+                                        required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control item" name="radiuserror" step="any"
+                                        id="radiuserror" value="-0.551026" onclick="empty()"
+                                        required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control item" name="textureerror" step="any"
+                                        id="textureerror" value="0.040181" onclick="empty()"
+                                        required>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <!--Table head-->
+                    <thead>
+                        <tr>
+                            <th>Perimeter Error</th>
+                            <th>Area Error</th>
+                            <th>Smoothness Error</th>
+                            <th>Compactness Error</th>
+                            <th>Concavity Error</th>
+                            <th>Concave Points Error</th>
+                        </tr>
+                    </thead>
+                    <!--Table body-->
+                    <tbody>
+                        <tr class="form-group">
+                            <td>
+                                <input type="number" class="form-control item" name="perimetererror" step="any"
+                                        id="perimetererror" value="-0.524762" onclick="empty()"
+                                        required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control item" name="areaerror" step="any"
+                                        id="areaerror" value="-0.497174" onclick="empty()"
+                                        required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control item" name="smoothnesserror" step="any"
+                                        id="smoothnesserror" value="-0.164666" onclick="empty()"
+                                        required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control item" name="compactnesserror" step="any"
+                                        id="compactnesserror" value="-0.428569" onclick="empty()"
+                                        required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control item" name="concavityerror" step="any"
+                                        id="concavityerror" value="0.388392" onclick="empty()"
+                                        required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control item" name="concavepointerror" step="any"
+                                        id="concavepointerror" value="-1.003127" onclick="empty()"
+                                        required>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <!--Table head-->
+                    <thead>
+                        <tr>
+                            <th>Symmetry Error</th>
+                            <th>Fractal Dimention Error</th>
+                            <th>Worst Radius</th>
+                            <th>Worst Texture</th>
+                            <th>Worst Perimeter</th>
+                            <th>Worst Area</th>
+                        </tr>
+                    </thead>
+                    <!--Table body-->
+                    <tbody>
+                        <tr class="form-group">
+                            <td>
+                                <input type="number" class="form-control item" name="symmetryerror" step="any"
+                                        id="symmetryerror" value="-0.464009" onclick="empty()"
+                                        required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control item" name="fractaldimerror" step="any"
+                                        id="fractaldimerror" value="-0.542754" onclick="empty()"
+                                        required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control item" name="worstreadius" step="any"
+                                        id="worstreadius" value="-0.894429" onclick="empty()"
+                                        required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control item" name="worsttexture" step="any"
+                                        id="worsttexture" value="-0.807253" onclick="empty()"
+                                        required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control item" name="worstperimeter" step="any"
+                                        id="worstperimeter" value="-0.877825" onclick="empty()"
+                                        required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control item" name="worstarea" step="any"
+                                        id="worstarea" value="-0.772397" onclick="empty()"
+                                        required>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th>Worst Smoothness</th>
+                            <th>Worst Compactness</th>
+                            <th>Worst Concavity</th>
+                            <th>Worst Concave Points</th>
+                            <th>Worst Symmetry</th>
+                            <th>Worst Fractal Dimension</th>
+                        </tr>
+                    </thead>
+                    <!--Table body-->
+                    <tbody>
+                        <tr class="form-group">
+                            <td>
+                                <input type="number" class="form-control item" name="worstsmoothness" step="any"
+                                        id="worstsmoothness" value="-1.085753" onclick="empty()"
+                                        required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control item" name="worstcompactness" step="any"
+                                        id="worstcompactness" value="-0.839482" onclick="empty()"
+                                        required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control item" name="worstconcavity" step="any"
+                                        id="worstconcavity" value="-0.837832" onclick="empty()"
+                                        required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control item" name="worstconcavepoints" step="any"
+                                        id="worstconcavepoints" value="-1.225379" onclick="empty()"
+                                        required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control item" name="worstsymmetry" step="any"
+                                        id="worstsymmetry" value="-0.971891" onclick="empty()"
+                                        required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control item" name="worstfractaldim" step="any"
+                                        id="worstfractaldim" value="-0.900829" onclick="empty()"
+                                        required>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!--Table-->
             </div>
             <div class="form-group">
-                <label class="form-control label">Mean Radius</label>
-                <input type="number" class="form-control item" name="meanradius" step="any"
-                       id="radius" placeholder="Enter Mean Radius"
-                       required>
+                <button type="submit" class="btn btn-primary btn-block col-md-8 offset-md-2" data-toggle="modal" style="border-radius: 30px"
+                        name="action" value="find_cancer" data-target="#exampleModal">Check Cancer</button>
             </div>
-            <div class="form-group">
-                <label class="form-control label">Mean Texture</label>
-                <input type="number" class="form-control item" name="meantexture" step="any"
-                       id="meantexture" placeholder="Enter Mean Texture"
-                       required>
-            </div>
-            <div class="form-group">
-                <label class="form-control label">Mean Perimeter</label>
-                <input type="number" class="form-control item" name="meanperimeter" step="any"
-                       id="perimeter" placeholder="Enter Mean Perimeter"
-                       required>
-            </div>
-            <div class="form-group">
-                <label class="form-control label">Mean Area</label>
-                <input type="number" class="form-control item" name="meanarea" step="any"
-                       id="area" placeholder="Enter Mean Area"
-                       required
-                />
-            </div>
-            <div class="form-group">
-                <label class="form-control label">Mean Smoothness</label>
-                <input type="number" class="form-control item" name="meansmoothness" step="any"
-                       id="smoothness" placeholder="Enter Mean Smoothness"
-                       required>
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-block create-account no-modal" data-toggle="modal"
-                        name="action" value="find_cancer"
-                        data-target="#exampleModal">Check Cancer</button>
-            </div>
-        </form>
+        </div>
     </div>
+    </form>
 
     <!-- Footer -->
      <div class="container-fluid pb-0 mb-0 justify-content-center text-light" id="about_us">
@@ -185,6 +390,9 @@
              <div class="col-11">
                  <div class="row ">
                      <div class="col-xl-8 col-md-6 col-sm-6 col-12 my-auto mx-auto a">
+                         <div class="form-icon">
+                            <img class="circular--square" src="https://img.freepik.com/free-vector/light-realistic-pink-ribbon-icon-breast-cancer-awareness-symbol-illustration_177761-158.jpg?w=740" title="Breast Cancer Awareness Symbol">
+                        </div>
                          <h3 class="text-muted mb-md-0 mb-5 bold-text">Breast Cancer Detection</h3>
                      </div>
                      <div class="col-xl-4 col-md-6 col-sm-6 col-12">

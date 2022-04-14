@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Gothic+A1|Kaushan+Script|Libre+Baskerville|Lobster');
 @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
 
-
-
-
 /* Form [Entries] CSS */
 body{
     background-color: #dee9ff;
@@ -96,6 +93,66 @@ body{
     padding: 10px 10px;
     font-weight: bold;
     color: #e2458d;
+}
+
+/* Table */
+th{
+    color: #e2458d;
+}
+
+.sketchy {
+    padding: 1rem 1rem;
+    display: inline-block;
+    border: 3px solid #333333;
+    /*font-size: 2.5rem;*/
+    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+    /*letter-spacing: 0.3ch;*/
+    background: #ffffff;
+    position: relative;}
+
+    .sketchy::before {
+        content: '';
+        border: 2px solid #353535;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
+        border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
+    }
+
+
+.darken-grey-text {
+    color: #2E2E2E;
+}
+.input-group.md-form.form-sm.form-2 input {
+    border: 1px solid #bdbdbd;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+.input-group.md-form.form-sm.form-2 input.purple-border {
+    border: 1px solid #9e9e9e;
+}
+.input-group.md-form.form-sm.form-2 input[type=text]:focus:not([readonly]).purple-border {
+    border: 1px solid #ba68c8;
+    box-shadow: none;
+}
+.form-2 .input-group-addon {
+    border: 1px solid #ba68c8;
+}
+.danger-text {
+    color: #ff3547;
+}
+.success-text {
+    color: #00C851;
+}
+.table-bordered.red-border, .table-bordered.red-border th, .table-bordered.red-border td {
+    border: 1px solid #ff3547!important;
+}
+.table.table-bordered th {
+    text-align: center;
 }
 
 /* Image of form */
