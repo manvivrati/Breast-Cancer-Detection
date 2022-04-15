@@ -70,12 +70,14 @@ def index(request):
             details.append(worst_concavepoints)
             details.append(worst_symmetry)
             details.append(worst_fractaldim)
-            print("Pranjal")
+
             print(details)
-            # context['ans'] = lr.predict([details])
-            # context['ans'] = loaded_model.predict([details])
-            # print(context['ans'])
-            #context['success'] = "You are predicted to have Breast Cancer"
+            context['ans'] = loaded_model.predict([details])
+            print(context['ans'])
+            if context['ans'] == 1:
+                context['value'] = 'You are diagnosed with BREAST CANCER'
+            else:
+                context['value'] = 'You are not diagnosed with BREAST CANCER'
         # Printing error message
         # else:
             # context['error'] = "You do not have Breast Cancer"

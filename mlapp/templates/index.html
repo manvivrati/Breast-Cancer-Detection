@@ -127,7 +127,7 @@
     </div>
 
     <!-- Table -->
-    <form method="post" action="{% url 'index' %}">
+    <form method="post" action="{% url 'index' %}" onsubmit="openModal()" id="myForm">
     {% csrf_token %}
     <div class="container mt-4 hm-gradient">
         <div class="card mb-4" style="background-color: #dee9ff; border: none">
@@ -375,9 +375,9 @@
                 </table>
                 <!--Table-->
             </div>
-            <div class="form-group">
+            <div class="form-group" >
                 <button type="submit" class="btn button btn-primary btn-block col-md-8 offset-md-2"
-                        style="border-radius: 30px; font-weight: bold;"
+                        style="border-radius: 30px; font-weight: bold;"  data-toggle="modal"
                         name="action" value="find_cancer" data-target="#exampleModal">Check Cancer</button>
             </div>
         </div>
@@ -433,7 +433,7 @@
         </button>
         </div>
         <div class="modal-body">
-        You are diagnosed to have cancer!
+        {{ ans }}
         </div>
         <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -443,12 +443,18 @@
     </div>
     </div>
 
-
     <!-- Scripts for JS for fast loading of page -->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+         $('#myForm').on('submit', function(e){
+         $('#exampleModal').modal('show');
+         e.preventDefault();
+    });
+    </script>
+
 
 </body>
 </html>
