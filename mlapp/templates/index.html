@@ -30,6 +30,9 @@
 </head>
 
 <body>
+    <form method="post" action="{% url 'index' %}">
+    {% csrf_token %}
+
     <!-- Header -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
     <div class="container">
@@ -82,6 +85,20 @@
     </div>
     </div>
 
+    <!-- Breadcrumb -->
+    <br/>
+    {% if success %}
+    <div class="alert alert-danger alert-dismissible fade show" id="banner">
+      <strong>{{success}}</strong>
+    </div>
+    {% endif %}
+    {% if error %}
+    <div class="alert alert-success alert-dismissible fade show">
+      <strong>{{error}}</strong>
+    </div>
+    {% endif %}
+    <br/>
+
     <!-- About Breast Cancer -->
     <div class="container" id="carousel_body">
         <div id="demo" class="carousel slide" data-ride="carousel">
@@ -127,8 +144,6 @@
     </div>
 
     <!-- Table -->
-    <form method="post" action="{% url 'index' %}" onsubmit="openModal()" id="myForm">
-    {% csrf_token %}
     <div class="container mt-4 hm-gradient">
         <div class="card mb-4" style="background-color: #dee9ff; border: none">
             <div class="card-body">
@@ -375,14 +390,13 @@
                 </table>
                 <!--Table-->
             </div>
-            <div class="form-group" >
+            <div class="form-group" id="myForm">
                 <button type="submit" class="btn button btn-primary btn-block col-md-8 offset-md-2"
-                        style="border-radius: 30px; font-weight: bold;"  data-toggle="modal"
+                        style="border-radius: 30px; font-weight: bold;"
                         name="action" value="find_cancer" data-target="#exampleModal">Check Cancer</button>
             </div>
         </div>
     </div>
-    </form>
 
     <!-- Footer -->
      <div class="container-fluid pb-0 mb-0 justify-content-center text-light" id="about_us">
@@ -421,41 +435,33 @@
      </footer>
     </div>
 
-
     <!-- Result Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-    <div class="modal-content">
-        <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Results</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-        </div>
-        <div class="modal-body">
-        {{ ans }}
-        </div>
-        <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save Record</button>
-        </div>
-    </div>
-    </div>
-    </div>
+{#    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">#}
+{#    <div class="modal-dialog" role="document">#}
+{#    <div class="modal-content">#}
+{#        <div class="modal-header">#}
+{#        <h5 class="modal-title" id="exampleModalLabel">Results</h5>#}
+{#        <button type="button" class="close" data-dismiss="modal" aria-label="Close">#}
+{#            <span aria-hidden="true">&times;</span>#}
+{#        </button>#}
+{#        </div>#}
+{#        <div class="modal-body">#}
+{#            {{ value }}#}
+{#        </div>#}
+{#        <div class="modal-footer">#}
+{#        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>#}
+{#        <button type="button" class="btn btn-primary">Save Record</button>#}
+{#        </div>#}
+{#    </div>#}
+{#    </div>#}
+{#    </div>#}
 
     <!-- Scripts for JS for fast loading of page -->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
-    <script>
-         $('#myForm').on('submit', function(e){
-         $('#exampleModal').modal('show');
-         e.preventDefault();
-    });
-    </script>
-
-
+</form>
 </body>
 </html>
 

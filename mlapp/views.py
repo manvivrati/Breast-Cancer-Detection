@@ -74,10 +74,12 @@ def index(request):
             print(details)
             context['ans'] = loaded_model.predict([details])
             print(context['ans'])
+
             if context['ans'] == 1:
-                context['value'] = 'You are diagnosed with BREAST CANCER'
+                context['success'] = 'You are diagnosed with BREAST CANCER'
             else:
-                context['value'] = 'You are not diagnosed with BREAST CANCER'
+                context['error'] = 'You are not diagnosed with BREAST CANCER'
+
         # Printing error message
         # else:
             # context['error'] = "You do not have Breast Cancer"

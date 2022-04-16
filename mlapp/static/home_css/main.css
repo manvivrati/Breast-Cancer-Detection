@@ -95,6 +95,15 @@ body{
     color: #e2458d;
 }
 
+/* Breadcrumb */
+.alert{
+  position: absolute;
+  top: 50px;
+  left: 35%;
+  transform: translateY(50%);
+  text-align: center;
+}
+
 /* Table */
 th{
     color: #e2458d;
